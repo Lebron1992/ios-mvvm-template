@@ -9,6 +9,7 @@
 import XCTest
 @testable import iOS_MVVM_Template
 
+// swiftlint:disable type_name
 class iOS_MVVM_TemplateTests: XCTestCase {
 
     override func setUp() {
