@@ -1,0 +1,28 @@
+PODS:
+  - Base64 (1.1.2)
+  - JWT (2.2.0):
+    - Base64 (~> 1.1.2)
+  - PKHUD (5.3.0)
+  - ReactiveSwift (6.1.0)
+
+DEPENDENCIES:
+  - JWT
+  - PKHUD
+  - ReactiveSwift (~> 6.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Base64
+    - JWT
+    - PKHUD
+    - ReactiveSwift
+
+SPEC CHECKSUMS:
+  Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
+  JWT: cf73c0ab0dac762df3de8a3f1164352089d97780
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  ReactiveSwift: b78c7259f8ca46368238c895ae33a6a3bf9f811c
+
+PODFILE CHECKSUM: 8e633c4fd92b99d068f8c9e22baf45d769e46960
+
+COCOAPODS: 1.8.4
