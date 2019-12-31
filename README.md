@@ -54,10 +54,10 @@ iOS-MVVM-Template
 
 ## 使用到的第三方库
 
-    - [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift)
-    - [ReactiveExtensions](https://github.com/Lebron1992/Kickstarter-ReactiveExtensions)
-    - [PKHUD](https://github.com/pkluz/PKHUD)
-    - [JWT](https://github.com/yourkarma/JWT)
+- [ReactiveSwift](https://github.com/ReactiveCocoa/ReactiveSwift)
+- [ReactiveExtensions](https://github.com/Lebron1992/Kickstarter-ReactiveExtensions)
+- [PKHUD](https://github.com/pkluz/PKHUD)
+- [JWT](https://github.com/yourkarma/JWT)
 
 ## License
 
