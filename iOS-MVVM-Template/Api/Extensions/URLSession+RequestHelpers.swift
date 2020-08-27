@@ -18,12 +18,22 @@ extension URLSession {
             .start(on: scheduler)
             .flatMapError { _ in SignalProducer(error: .couldNotParseErrorEnvelopeJSON) }
             .flatMap { (data, response) -> SignalProducer<Data, ErrorEnvelope> in
+                
+                if AppEnvironment.current.isStaging {
+                    print("json response: \(String(data: data, encoding: .utf8) ?? "")")
+                }
+                
                 guard let res = response as? HTTPURLResponse else {
                     fatalError()
                 }
+                
                 guard (200..<300).contains(res.statusCode),
                     let headers = res.allHeaderFields as? [String: String],
                     let contentType = headers["Content-Type"], contentType.hasPrefix("application/json") else {
+
+                        if res.statusCode == 500 {
+                            return .init(error: .internalServerError)
+                        }
 
                         do {
                             let error = try Constant.jsonDecoder.decode(ErrorEnvelope.self, from: data)
@@ -35,8 +45,6 @@ extension URLSession {
                             return .init(error: .couldNotDecodeJSON(error))
                         }
                 }
-
-//                print("json response: \(String(data: data, encoding: .utf8))")
 
                 if let errorResult = try? Constant.jsonDecoder.decode(ErrorEnvelopeResult.self, from: data) {
                     let error = errorResult.error

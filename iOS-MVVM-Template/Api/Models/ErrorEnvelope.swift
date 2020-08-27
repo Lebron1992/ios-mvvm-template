@@ -49,6 +49,13 @@ extension ErrorEnvelope {
         detail: "could not parse json",
         moreInfo: ""
     )
+    
+    static let internalServerError = ErrorEnvelope(
+        code: 500,
+        reason: "Internal Server Error",
+        detail: "Internal Server Error",
+        moreInfo: ""
+    )
 
     static func couldNotDecodeJSON(_ error: Error) -> ErrorEnvelope {
         return ErrorEnvelope(

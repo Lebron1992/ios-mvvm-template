@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD8FA66F098FC2C2B5DD72AB /* Pods_iOS_MVVM_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F501160D9CF3394B0C531D /* Pods_iOS_MVVM_Template.framework */; };
+		FD7D4EB4249DBF5C00246661 /* ErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D4EB3249DBF5C00246661 /* ErrorExtensions.swift */; };
 		FDD85AB023B4BB6B00D7B8DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85AAF23B4BB6B00D7B8DD /* AppDelegate.swift */; };
 		FDD85AB423B4BB6B00D7B8DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85AB323B4BB6B00D7B8DD /* ViewController.swift */; };
 		FDD85AB723B4BB6B00D7B8DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD85AB523B4BB6B00D7B8DD /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		826C91F05D2CAE3FF0BF34EE /* Pods-iOS-MVVM-Template.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-MVVM-Template.release staging.xcconfig"; path = "Target Support Files/Pods-iOS-MVVM-Template/Pods-iOS-MVVM-Template.release staging.xcconfig"; sourceTree = "<group>"; };
 		827D6180C69E25BA54D3B059 /* Pods-iOS-MVVM-Template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-MVVM-Template.release.xcconfig"; path = "Target Support Files/Pods-iOS-MVVM-Template/Pods-iOS-MVVM-Template.release.xcconfig"; sourceTree = "<group>"; };
 		D8410366F6464789AD774A60 /* Pods-iOS-MVVM-Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-MVVM-Template.debug.xcconfig"; path = "Target Support Files/Pods-iOS-MVVM-Template/Pods-iOS-MVVM-Template.debug.xcconfig"; sourceTree = "<group>"; };
+		FD7D4EB3249DBF5C00246661 /* ErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtensions.swift; sourceTree = "<group>"; };
 		FDD85AAC23B4BB6B00D7B8DD /* iOS-MVVM-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-MVVM-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD85AAF23B4BB6B00D7B8DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD85AB323B4BB6B00D7B8DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				FDD85ADD23B4F77500D7B8DD /* UIViewControllerExtensions.swift */,
 				FDD85AE323B4F77600D7B8DD /* UIViewController+Preparation.swift */,
 				FDD85AE423B4F77600D7B8DD /* UIViewExtensions.swift */,
+				FD7D4EB3249DBF5C00246661 /* ErrorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -624,6 +627,7 @@
 				FDD85B8E23B8E44000D7B8DD /* UITableViewExtensions.swift in Sources */,
 				FDD85B2B23B8C49000D7B8DD /* ErrorEnvelope.swift in Sources */,
 				FDD85B2323B8C49000D7B8DD /* ServiceType.swift in Sources */,
+				FD7D4EB4249DBF5C00246661 /* ErrorExtensions.swift in Sources */,
 				FDD85B3923B8CF4A00D7B8DD /* ValueCellDataSource.swift in Sources */,
 				FDD85B2C23B8C49000D7B8DD /* URLSession+RequestHelpers.swift in Sources */,
 				FDD85AB023B4BB6B00D7B8DD /* AppDelegate.swift in Sources */,

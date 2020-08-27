@@ -61,10 +61,51 @@ extension UIViewController {
             HUD.hide()
         }
     }
+    
+    func showProgress(title: String?, subtitle: String? = nil) {
+        DispatchQueue.main.async {
+            HUD.show(.labeledProgress(title: title, subtitle: subtitle))
+        }
+    }
 
     func showLoading() {
         DispatchQueue.main.async {
             HUD.show(.progress)
+        }
+    }
+    
+    // MARK: - Alert
+    
+    func alertUser(
+        title: String = "",
+        message: String,
+        confirm: String = "Close",
+        handler: ((UIAlertAction) -> Void)? = nil
+    ) {
+        let alert = UIAlertController.alert(
+            title: title,
+            message: message,
+            confirm: confirm,
+            handler: handler
+        )
+        customPresent(alert, animated: true)
+    }
+}
+
+extension UIViewController {
+    func customPresent(
+        _ viewControllerToPresent: UIViewController,
+        animated flag: Bool,
+        completion: (() -> Void)? = nil
+    ) {
+        if let presented = presentedViewController {
+            presented.customPresent(
+                viewControllerToPresent,
+                animated: flag,
+                completion: completion
+            )
+        } else {
+            present(viewControllerToPresent, animated: flag, completion: completion)
         }
     }
 }
