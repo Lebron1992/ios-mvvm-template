@@ -55,8 +55,6 @@
 		FDD85B5B23B8D13B00D7B8DD /* ValueCellDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85B5423B8D13A00D7B8DD /* ValueCellDataSourceTest.swift */; };
 		FDD85B5C23B8D13B00D7B8DD /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85B5623B8D13A00D7B8DD /* ServiceTests.swift */; };
 		FDD85B5D23B8D13B00D7B8DD /* ServiceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85B5723B8D13A00D7B8DD /* ServiceTypeTests.swift */; };
-		FDD85B6523B8D5DE00D7B8DD /* ReactiveExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD85B6123B8D5DE00D7B8DD /* ReactiveExtensions.framework */; };
-		FDD85B6623B8D5DE00D7B8DD /* ReactiveExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FDD85B6123B8D5DE00D7B8DD /* ReactiveExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FDD85B8023B8DD0600D7B8DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85B6F23B8DD0500D7B8DD /* User.swift */; };
 		FDD85B8623B8DD0600D7B8DD /* UserTemplates.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85B7623B8DD0500D7B8DD /* UserTemplates.swift */; };
 		FDD85B8E23B8E44000D7B8DD /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85B8D23B8E44000D7B8DD /* UITableViewExtensions.swift */; };
@@ -71,20 +69,6 @@
 			remoteInfo = "iOS-MVVM-Template";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FDD85B6923B8D5DE00D7B8DD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FDD85B6623B8D5DE00D7B8DD /* ReactiveExtensions.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		344DE535F1B529B9C384CB87 /* Pods-iOS-MVVM-Template.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-MVVM-Template.debug staging.xcconfig"; path = "Target Support Files/Pods-iOS-MVVM-Template/Pods-iOS-MVVM-Template.debug staging.xcconfig"; sourceTree = "<group>"; };
@@ -156,7 +140,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD85B6523B8D5DE00D7B8DD /* ReactiveExtensions.framework in Frameworks */,
 				AD8FA66F098FC2C2B5DD72AB /* Pods_iOS_MVVM_Template.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,8 +410,6 @@
 				FDD85AA923B4BB6B00D7B8DD /* Frameworks */,
 				FDD85AAA23B4BB6B00D7B8DD /* Resources */,
 				FDD85AD123B4F15200D7B8DD /* SwiftLint */,
-				FDD85B6923B8D5DE00D7B8DD /* Embed Frameworks */,
-				FDD85B6A23B8D5ED00D7B8DD /* Copy Frameworks */,
 				B09216E026132C9F0DB7C89E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -465,7 +446,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = Lebron;
 				TargetAttributes = {
 					FDD85AAB23B4BB6B00D7B8DD = {
@@ -574,25 +555,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		FDD85B6A23B8D5ED00D7B8DD /* Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveExtensions.framework",
-			);
-			name = "Copy Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -714,6 +676,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -774,6 +737,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -813,7 +777,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "iOS-MVVM-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				IS_STAGING = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -837,7 +801,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "iOS-MVVM-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				IS_STAGING = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -921,6 +885,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -966,7 +931,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "iOS-MVVM-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				IS_STAGING = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1028,6 +993,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1067,7 +1033,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "iOS-MVVM-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				IS_STAGING = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

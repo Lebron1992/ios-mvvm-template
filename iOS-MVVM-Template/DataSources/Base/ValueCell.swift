@@ -1,6 +1,6 @@
 import UIKit
 
-protocol ValueCell: class {
+protocol ValueCell: AnyObject {
     associatedtype Value
     static var defaultReusableId: String { get }
     func configureWith(value: Value)

@@ -23,6 +23,20 @@ extension UIView {
         }
     }
 
+    func setSubviewsTranslatingMasksToConstraints(to value: Bool, _ except: UIView? = nil) {
+        subviews.forEach { (subview) in
+            if subview === except {
+                return
+            }
+            subview.translatesAutoresizingMaskIntoConstraints = value
+            if subview.subviews.count > 0 {
+                subview.setSubviewsTranslatingMasksToConstraints(to: value, except)
+            }
+        }
+    }
+
+    // MARK: - Corner
+
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(
             roundedRect: bounds,

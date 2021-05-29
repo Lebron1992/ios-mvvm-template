@@ -61,7 +61,7 @@ extension UIViewController {
             HUD.hide()
         }
     }
-    
+
     func showProgress(title: String?, subtitle: String? = nil) {
         DispatchQueue.main.async {
             HUD.show(.labeledProgress(title: title, subtitle: subtitle))
@@ -73,9 +73,9 @@ extension UIViewController {
             HUD.show(.progress)
         }
     }
-    
+
     // MARK: - Alert
-    
+
     func alertUser(
         title: String = "",
         message: String,

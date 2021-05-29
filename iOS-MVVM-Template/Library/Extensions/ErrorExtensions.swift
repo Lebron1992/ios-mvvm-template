@@ -6,7 +6,7 @@ extension NSError {
                         NSLocalizedFailureReasonErrorKey: reason]
         self.init(domain: "", code: code, userInfo: userInfo)
     }
-    
+
     static func error(fromCode code: Int) -> Error {
         let userInfo = [
             NSLocalizedDescriptionKey: errorReasonString(fromCode: code),
@@ -14,7 +14,7 @@ extension NSError {
         ]
         return NSError(domain: "", code: code, userInfo: userInfo)
     }
-    
+
     private static func errorReasonString(fromCode code: Int) -> String {
         var errorString = ""
         if code >= 400 {
@@ -24,7 +24,7 @@ extension NSError {
         }
         return errorString
     }
-    
+
     static var failedToDecodeJson: Error {
         return NSError(reason: "failed to decode json")
     }

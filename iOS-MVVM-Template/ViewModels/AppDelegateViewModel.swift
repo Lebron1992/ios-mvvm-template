@@ -1,6 +1,6 @@
 import Foundation
 import ReactiveSwift
-import ReactiveExtensions
+import Lebron_ReactiveExtensions
 
 protocol AppDelegateViewModelInputs {
     /// Call when the application finishes launching.
