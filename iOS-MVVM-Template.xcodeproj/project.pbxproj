@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD8FA66F098FC2C2B5DD72AB /* Pods_iOS_MVVM_Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F501160D9CF3394B0C531D /* Pods_iOS_MVVM_Template.framework */; };
 		FD7D4EB4249DBF5C00246661 /* ErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7D4EB3249DBF5C00246661 /* ErrorExtensions.swift */; };
+		FD7E543426677F0800ABFE61 /* EncodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E543326677F0800ABFE61 /* EncodableExtensions.swift */; };
+		FD7E543626677F1D00ABFE61 /* DecodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E543526677F1D00ABFE61 /* DecodableExtensions.swift */; };
 		FDD85AB023B4BB6B00D7B8DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85AAF23B4BB6B00D7B8DD /* AppDelegate.swift */; };
 		FDD85AB423B4BB6B00D7B8DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD85AB323B4BB6B00D7B8DD /* ViewController.swift */; };
 		FDD85AB723B4BB6B00D7B8DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDD85AB523B4BB6B00D7B8DD /* Main.storyboard */; };
@@ -77,6 +79,8 @@
 		827D6180C69E25BA54D3B059 /* Pods-iOS-MVVM-Template.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-MVVM-Template.release.xcconfig"; path = "Target Support Files/Pods-iOS-MVVM-Template/Pods-iOS-MVVM-Template.release.xcconfig"; sourceTree = "<group>"; };
 		D8410366F6464789AD774A60 /* Pods-iOS-MVVM-Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-MVVM-Template.debug.xcconfig"; path = "Target Support Files/Pods-iOS-MVVM-Template/Pods-iOS-MVVM-Template.debug.xcconfig"; sourceTree = "<group>"; };
 		FD7D4EB3249DBF5C00246661 /* ErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorExtensions.swift; sourceTree = "<group>"; };
+		FD7E543326677F0800ABFE61 /* EncodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtensions.swift; sourceTree = "<group>"; };
+		FD7E543526677F1D00ABFE61 /* DecodableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableExtensions.swift; sourceTree = "<group>"; };
 		FDD85AAC23B4BB6B00D7B8DD /* iOS-MVVM-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-MVVM-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD85AAF23B4BB6B00D7B8DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDD85AB323B4BB6B00D7B8DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -252,7 +256,10 @@
 		FDD85AD923B4F75E00D7B8DD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FD7E543526677F1D00ABFE61 /* DecodableExtensions.swift */,
 				FDD85AE223B4F77600D7B8DD /* DictionaryExtensions.swift */,
+				FD7E543326677F0800ABFE61 /* EncodableExtensions.swift */,
+				FD7D4EB3249DBF5C00246661 /* ErrorExtensions.swift */,
 				FDD85ADA23B4F77500D7B8DD /* OptionalExtensions.swift */,
 				FDD85ADB23B4F77500D7B8DD /* StringExtensions.swift */,
 				FDD85AE523B4F77600D7B8DD /* UIAlertControllerExtensions.swift */,
@@ -260,10 +267,9 @@
 				FDD85ADF23B4F77600D7B8DD /* UIFontExtensions.swift */,
 				FDD85ADE23B4F77500D7B8DD /* UIScreenExtensions.swift */,
 				FDD85B8D23B8E44000D7B8DD /* UITableViewExtensions.swift */,
-				FDD85ADD23B4F77500D7B8DD /* UIViewControllerExtensions.swift */,
 				FDD85AE323B4F77600D7B8DD /* UIViewController+Preparation.swift */,
+				FDD85ADD23B4F77500D7B8DD /* UIViewControllerExtensions.swift */,
 				FDD85AE423B4F77600D7B8DD /* UIViewExtensions.swift */,
-				FD7D4EB3249DBF5C00246661 /* ErrorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -582,6 +588,7 @@
 				FDD85AE923B4F77600D7B8DD /* UIViewControllerExtensions.swift in Sources */,
 				FDD85AEF23B4F77600D7B8DD /* UIViewController+Preparation.swift in Sources */,
 				FDD85B2E23B8C49000D7B8DD /* RequestMethod.swift in Sources */,
+				FD7E543426677F0800ABFE61 /* EncodableExtensions.swift in Sources */,
 				FDD85AF023B4F77600D7B8DD /* UIViewExtensions.swift in Sources */,
 				FDD85AFB23B5985D00D7B8DD /* Keyboard.swift in Sources */,
 				FDD85B8023B8DD0600D7B8DD /* User.swift in Sources */,
@@ -601,6 +608,7 @@
 				FDD85B3023B8C49000D7B8DD /* MockService.swift in Sources */,
 				FDD85AD723B4F2BD00D7B8DD /* Global.swift in Sources */,
 				FDD85AFC23B5985D00D7B8DD /* Notifications.swift in Sources */,
+				FD7E543626677F1D00ABFE61 /* DecodableExtensions.swift in Sources */,
 				FDD85B2F23B8C49000D7B8DD /* Route.swift in Sources */,
 				FDD85AEA23B4F77600D7B8DD /* UIScreenExtensions.swift in Sources */,
 				FDD85B3A23B8CF4A00D7B8DD /* ValueCell.swift in Sources */,
